@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "5d7a565d-9ea8-4f96-aa06-2a8002b5b9ce",
+		"name": "Api Rest Ws Plus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23253327"
+	},
+	"item": [
+		{
+			"name": "SubscriptionType",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/subscription-type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"subscription-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/subscription-type/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"subscription-type",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ACESSO TRIMESTRAL\",\r\n    \"accessMonths\": 3,\r\n    \"price\": 297.00,\r\n    \"productKey\": \"TRI22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/subscription-type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"subscription-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ACESSO TRIMESTRAL/ANUAL\",\r\n    \"accessMonths\": 3,\r\n    \"price\": 297.00,\r\n    \"productKey\": \"TRI22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/subscription-type/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"subscription-type",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/subscription-type/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"subscription-type",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lucas Araujo\",\r\n    \"cpf\": \"67189624066\",\r\n    \"email\": \"kokikos215@jobbrett.com\",\r\n    \"phone\": \"37999992236\",\r\n    \"userTypeId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserType",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/user-type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"user-type"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentInfo",
+			"item": [
+				{
+					"name": "process",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "r@sm00",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rasmooplus",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"discount\": 0,\r\n  \"productKey\": \"MONTH22\",\r\n  \"userPaymentInfo\": {\r\n    \"cardExpirationMonth\": 6,\r\n    \"cardExpirationYear\": 2026,\r\n    \"cardNumber\": \"6464656567676869\",\r\n    \"cardSecurityCode\": \"123\",\r\n    \"installments\": 0,\r\n    \"price\": 75,\r\n    \"userId\": 3\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ws-rasplus/payment/process",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ws-rasplus",
+								"payment",
+								"process"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Api Rest Raspay",
+			"item": [
+				{
+					"name": "Customer",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "r@sm00",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rasmooplus",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cpf\": \"67189624066\",\r\n  \"email\": \"kokikos215@jobbrett.com\",\r\n  \"firstName\": \"Lucas\",\r\n  \"id\": \"3\",\r\n  \"lastName\": \"Araujo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ws-raspay.herokuapp.com/ws-raspay/v1/customer",
+							"protocol": "https",
+							"host": [
+								"ws-raspay",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"ws-raspay",
+								"v1",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit-card",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "r@sm00",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rasmooplus",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"creditCard\": {\r\n    \"cvv\": 123,\r\n    \"documentNumber\": \"85773383047\",\r\n    \"installments\": 0,\r\n    \"month\": 6,\r\n    \"number\": \"6464656567676869\",\r\n    \"year\": 2026\r\n  },\r\n  \"customerId\": \"3\",\r\n  \"orderId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ws-raspay.herokuapp.com/ws-raspay/v1/payment/credit-card/",
+							"protocol": "https",
+							"host": [
+								"ws-raspay",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"ws-raspay",
+								"v1",
+								"payment",
+								"credit-card",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerId\": \"3\",\r\n  \"discount\": 0,\r\n  \"id\": \"1\",\r\n  \"productAcronym\": \"MONTH22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ws-raspay.herokuapp.com/ws-raspay/v1/order",
+							"protocol": "https",
+							"host": [
+								"ws-raspay",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"ws-raspay",
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ws-raspay.herokuapp.com/ws-raspay/v1/product",
+							"protocol": "https",
+							"host": [
+								"ws-raspay",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"ws-raspay",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"acronym\": \"string\",\r\n  \"current_price\": 0,\r\n  \"dt_creation\": \"2023-05-05\",\r\n  \"id\": \"string\",\r\n  \"name\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ws-raspay.herokuapp.com/ws-raspay/v1/product",
+							"protocol": "https",
+							"host": [
+								"ws-raspay",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"ws-raspay",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
